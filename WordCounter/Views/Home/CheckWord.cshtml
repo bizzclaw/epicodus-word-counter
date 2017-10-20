@@ -2,6 +2,12 @@
   Layout = "_Layout";
 }
 
-<p>@Model.GetSearchWord()</p>
-<p>@Model.GetPhrase()</p>
-<p>@Model.GetCount()</p>
+<div class="container">
+
+	<h1>Word Entered!</h1>
+
+	<p>Search Word: @Model.GetSearchWord()</p>
+	<p>Phrase: @Model.GetPhrase()</p>
+	<p>Count of words in phrase: @Model.GetCount()</p>
+	<a href="/"><button class="btn btn-info" type="button" name="back-button">Return</button></a>
+</div>
