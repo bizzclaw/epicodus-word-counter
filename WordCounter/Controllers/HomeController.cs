@@ -10,7 +10,19 @@ namespace WordCounter.Controllers
         [HttpGet("/")]
         public ActionResult Index()
         {
-          return View();
+            return View();
+        }
+        [HttpPost("/checkword")]
+        public ActionResult CheckWord()
+        {
+
+            string searchWord = Request.Form["word"];
+            string phrase = Request.Form["phrase"];
+            int count = WordCount.CountWords(searchWord, phrase);
+
+            WordModel Model = new WordModel(searchWord, phrase, count);
+
+            return View(Model);
         }
     }
 }

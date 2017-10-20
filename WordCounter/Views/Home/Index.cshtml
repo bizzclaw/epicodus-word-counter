@@ -1,3 +1,20 @@
 @{
   Layout = "_Layout";
 }
+
+
+<div class="container">
+  <h1>Word Counter</h1>
+  <h3>Enter in a word and count how many times it shows up in the phrase</h3>
+  <form action="/checkword" method="post">
+  	<div class="form-group">
+      <label for="word">Word</label>
+      <input id="word" name="word" type="text" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="phrase">Phrase</label>
+      <input id="phrase" name="phrase" type="text" class="form-control" autofocus>
+    </div>
+  	<button class="btn" type="submit" name="submit-check">Count the word in the phrase</button>
+  </form>
+</div>
