@@ -9,9 +9,9 @@ namespace WordCounter.Models.Tests
     public class WordsTest
     {
         [TestMethod]
-        public void Method_Description_ExpectedValue()
+        public void CountWords_FindTwoWordsInString_2()
         {
-            
+            Assert.AreEqual(2, Words.CountWords("day", "this day is a nice day"));
         }
     }
 }
