@@ -28,31 +28,27 @@ namespace WordCounter.Models
         {
             return _count;
         }
-    }
-
-    public static class WordCount
-    {
         private static char[] _phraseSplitters = {
-            ' ',
-            ',',
-            '.',
-            ':',
-            '-',
-            '_',
+          ' ',
+          ',',
+          '.',
+          ':',
+          '-',
+          '_',
         };
 
         public static int CountWords(string searchWord, string phrase)
         {
-            string[] splitPhrase = phrase.Split(_phraseSplitters);
-            int count = 0;
-            foreach (var word in splitPhrase)
-            {
-                if (word.ToLower() == searchWord.ToLower())
-                {
-                    count++;
-                }
-            }
-            return count;
+          string[] splitPhrase = phrase.Split(_phraseSplitters);
+          int count = 0;
+          foreach (var word in splitPhrase)
+          {
+              if (word.ToLower() == searchWord.ToLower())
+              {
+                count++;
+              }
+          }
+          return count;
         }
     }
 }

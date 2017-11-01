@@ -11,17 +11,17 @@ namespace WordCounter.Models.Tests
         [TestMethod]
         public void CountWords_FindTwoWordsInString_2()
         {
-            Assert.AreEqual(2, Words.CountWords("day", "this day is a nice day"));
+            Assert.AreEqual(2, WordModel.CountWords("day", "this day is a nice day"));
         }
         [TestMethod]
         public void CountWords_FindTwoWordsInStringDespiteSpace_1()
         {
-            Assert.AreEqual(1, Words.CountWords("day", "today is a nice day"));
+            Assert.AreEqual(1, WordModel.CountWords("day", "today is a nice day"));
         }
         [TestMethod]
         public void CountWords_FindTwoWordsInStringDespiteCaps_2()
         {
-            Assert.AreEqual(2, Words.CountWords("Day", "this day is a nice day"));
+            Assert.AreEqual(2, WordModel.CountWords("Day", "this day is a nice day"));
         }
     }
 }

@@ -18,7 +18,7 @@ namespace WordCounter.Controllers
 
             string searchWord = Request.Form["word"];
             string phrase = Request.Form["phrase"];
-            int count = WordCount.CountWords(searchWord, phrase);
+            int count = WordModel.CountWords(searchWord, phrase);
 
             WordModel Model = new WordModel(searchWord, phrase, count);
 
